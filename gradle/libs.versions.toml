@@ -1,0 +1,82 @@
+[versions]
+
+compileSdk = "35"
+minSdk = "24"
+targetSdk = "35"
+java-version = "21"
+agp = "8.10.0"
+kotlin = "2.1.21"
+compose = "1.8.2"
+compose-material3 = "1.3.2"
+androidx-activityCompose = "1.10.1"
+koin = "3.5.6"
+koin-android = "3.5.6"
+koin-compose = "1.1.5"
+kotlinx-serialization = "2.1.21"
+navigationCompose = "2.9.0"
+android-startup = "1.2.0"
+androidx-lifecycle = "2.9.0"
+ktor = "3.1.2"
+pagination = "3.3.6"
+datastore = "1.1.7"
+annotation = "1.9.1"
+kotlinXSerialization = "1.8.0"
+gradleSecrets="2.0.1"
+
+[libraries]
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
+compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
+compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin-android" }
+koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koin-compose" }
+navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
+android-startup-runtime = { module = "androidx.startup:startup-runtime", version.ref = "android-startup" }
+androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "androidx-lifecycle" }
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
+ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
+ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
+pagination-common = { module = "androidx.paging:paging-common", version.ref = "pagination" }
+pagination-runtime = { module = "androidx.paging:paging-runtime", version.ref = "pagination" }
+pagination-compose = { module = "androidx.paging:paging-compose", version.ref = "pagination" }
+datastore = { module = "androidx.datastore:datastore", version.ref = "datastore" }
+datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore" }
+androidx-annotation = { module = "androidx.annotation:annotation", version.ref = "annotation" }
+kotlinx-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinXSerialization" }
+
+
+[bundles]
+koin = [
+    "koin-core",
+    "koin-compose"
+]
+
+ktor = [
+    "ktor-client-core",
+    "ktor-client-cio",
+    "ktor-client-content-negotiation",
+    "ktor-serialization-kotlinx-json",
+    "ktor-client-logging"
+]
+pagination = [
+    "pagination-common",
+    "pagination-runtime",
+    "pagination-compose"]
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlinCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlinx-serialization-plugin = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlinx-serialization" }
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize",  version.ref = "kotlin"  }
+gradle-secrets= {id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin" , version.ref = "gradleSecrets"}
