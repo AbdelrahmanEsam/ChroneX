@@ -7,14 +7,18 @@ pluginManagement {
     }
 }
 
+
 dependencyResolutionManagement {
-    includeBuild("chroneX-build")
     repositories {
         google()
         mavenCentral()
     }
+    versionCatalogs {
+        create("libs") {
+            from(files("../gradle/libs.versions.toml"))
+        }
+    }
 }
 
-rootProject.name = "ChroneX"
-include(":androidApp")
-include(":shared")
+rootProject.name = "chroneX-build"
+include(":conventions")

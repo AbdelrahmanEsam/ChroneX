@@ -4,6 +4,7 @@ compileSdk = "35"
 minSdk = "24"
 targetSdk = "35"
 java-version = "21"
+application-id = "com.apptikar.chroneX"
 agp = "8.10.0"
 kotlin = "2.1.21"
 compose = "1.8.2"
@@ -21,7 +22,9 @@ pagination = "3.3.6"
 datastore = "1.1.7"
 annotation = "1.9.1"
 kotlinXSerialization = "1.8.0"
+androidx-window = "1.4.0"
 gradleSecrets="2.0.1"
+ksp = "2.1.20-1.0.32"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -51,6 +54,12 @@ datastore = { module = "androidx.datastore:datastore", version.ref = "datastore"
 datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore" }
 androidx-annotation = { module = "androidx.annotation:annotation", version.ref = "annotation" }
 kotlinx-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinXSerialization" }
+androidx-window = { module = "androidx.window:window", version.ref = "androidx-window" }
+
+
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
 
 
 [bundles]
@@ -74,6 +83,7 @@ pagination = [
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlinCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
