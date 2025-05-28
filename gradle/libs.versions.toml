@@ -91,3 +91,4 @@ compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "
 kotlinx-serialization-plugin = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlinx-serialization" }
 kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize",  version.ref = "kotlin"  }
 gradle-secrets= {id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin" , version.ref = "gradleSecrets"}
+com-apptikar-chroneXbuild-android = { id = "com.apptikar.chroneXbuild.android"}
