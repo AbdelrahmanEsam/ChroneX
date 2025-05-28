@@ -10,5 +10,5 @@ internal fun BaseAppModuleExtension.configureAndroidApplication(libs : Libraries
    configureAndroidDefaultConfig(libs)
    configureAndroidPackagingOptions()
    configureAndroidBuildTypesOptions()
-    configureCompileOptions()
+   configureCompileOptions()
 }

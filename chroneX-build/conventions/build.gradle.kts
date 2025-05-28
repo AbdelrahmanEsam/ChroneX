@@ -27,6 +27,6 @@ gradlePlugin {
             implementationClass = className
         }
     }
-
+    createPlugin("com.apptikar.chroneXbuild.android", "AndroidApplicationConventionPlugin")
 
 }
