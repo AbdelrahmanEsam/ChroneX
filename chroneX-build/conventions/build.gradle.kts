@@ -27,6 +27,7 @@ gradlePlugin {
             implementationClass = className
         }
     }
-    createPlugin("com.apptikar.chroneXbuild.android", "AndroidApplicationConventionPlugin")
+    createPlugin("com.apptikar.chroneXbuild.android.application", "AndroidApplicationConventionPlugin")
+    createPlugin("com.apptikar.chroneXbuild.kmp.shared", "KMPLibraryConventionPlugin")
 
 }

@@ -19,6 +19,7 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
             pluginManager.apply{
                 alias(libs.plugins.androidApplication)
                 alias(libs.plugins.kotlinAndroid)
+                alias(libs.plugins.compose.compiler)
             }
 
             extensions.findByType(CommonExtension::class.java)?.apply {

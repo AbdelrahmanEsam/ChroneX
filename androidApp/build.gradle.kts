@@ -1,5 +1,5 @@
 plugins {
-    alias(libs.plugins.com.apptikar.chroneXbuild.android)
+    alias(libs.plugins.com.apptikar.chroneXbuild.android.application)
 }
 
 dependencies{
