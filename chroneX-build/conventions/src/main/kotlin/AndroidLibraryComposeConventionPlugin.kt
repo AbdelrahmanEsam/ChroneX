@@ -1,6 +1,7 @@
 import com.android.build.gradle.LibraryExtension
 import com.apptikar.chroneX.android.configureAndroidCompose
 import com.apptikar.chroneX.implementation
+import com.apptikar.chroneX.libs
 import org.gradle.accessors.dm.LibrariesForLibs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -11,7 +12,6 @@ import org.gradle.kotlin.dsl.the
 class AndroidLibraryComposeConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
-            val libs = the<LibrariesForLibs>()
             pluginManager.apply {
                 apply("com.android.library")
 
