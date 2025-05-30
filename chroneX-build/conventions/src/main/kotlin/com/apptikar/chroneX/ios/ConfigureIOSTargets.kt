@@ -2,6 +2,8 @@ package com.apptikar.chroneX.ios
 
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 import org.jetbrains.kotlin.gradle.dsl.KotlinTargetContainerWithPresetFunctions
+import org.jetbrains.kotlin.gradle.plugin.mpp.apple.swiftexport.SwiftExportExtension
+import org.jetbrains.kotlin.gradle.swiftexport.ExperimentalSwiftExportDsl
 
 
 internal fun KotlinTargetContainerWithPresetFunctions.configureIOSTargets() {
@@ -14,5 +16,15 @@ internal fun KotlinTargetContainerWithPresetFunctions.configureIOSTargets() {
             baseName = "shared"
             isStatic = true
         }
+    }
+}
+
+
+@OptIn(ExperimentalSwiftExportDsl::class)
+internal fun KotlinMultiplatformExtension.configureDirectSwiftExport() {
+    extensions.findByType(SwiftExportExtension::class.java)?.apply {
+        moduleName.set("Shared")
+
+        flattenPackage.set("com.apptikar.chroneXbuild")
     }
 }
