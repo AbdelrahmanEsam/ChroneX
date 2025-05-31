@@ -3,16 +3,14 @@ package com.apptikar.chroneX
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.text.input.rememberTextFieldState
-import androidx.compose.material3.*
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.apptikar.designSystem.ChroneXTheme
 import com.apptikar.designSystem.headingFive
-import com.apptikar.designSystem.inputs.ChroneInputField
-import com.apptikar.designSystem.inputs.ChroneOtpField
+import com.apptikar.designSystem.inputs.ChroneDropDown
 
 
 class MainActivity : ComponentActivity() {
@@ -21,7 +19,12 @@ class MainActivity : ComponentActivity() {
         setContent {
             ChroneXTheme {
                 val inputState = rememberTextFieldState()
-                ChroneOtpField(state = inputState,)
+                ChroneDropDown(
+                    state = inputState,
+                    options = listOf("1","2","3"),
+                    placeHolder = "placeholder",
+                    onValueChange = {},
+                )
             }
         }
     }
