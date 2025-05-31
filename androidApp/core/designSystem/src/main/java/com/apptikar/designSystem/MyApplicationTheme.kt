@@ -1,4 +1,4 @@
-package com.apptikar.chroneX
+package com.apptikar.designSystem
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -16,21 +16,21 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun MyApplicationTheme(
+fun ChroneXTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {
     val colors = if (darkTheme) {
         darkColorScheme(
-            primary = Color(0xFFBB86FC),
-            secondary = Color(0xFF03DAC5),
-            tertiary = Color(0xFF3700B3)
+            primary = MaterialTheme.colorScheme.chroneXPrimaryColor,
+            secondary = MaterialTheme.colorScheme.chroneXSecondaryColor,
+            tertiary = Color(0xFF3949AB)
         )
     } else {
         lightColorScheme(
-            primary = Color(0xFF6200EE),
-            secondary = Color(0xFF03DAC5),
-            tertiary = Color(0xFF3700B3)
+            primary = MaterialTheme.colorScheme.chroneXPrimaryColor,
+            secondary = MaterialTheme.colorScheme.chroneXSecondaryColor,
+            tertiary = Color(0xFF3949AB)
         )
     }
     val typography = Typography(

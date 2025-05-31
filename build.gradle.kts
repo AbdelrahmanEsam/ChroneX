@@ -9,4 +9,5 @@ plugins {
     alias(libs.plugins.android.kotlin.multiplatform.library) apply false
     alias(libs.plugins.com.apptikar.chroneXbuild.kmp.shared) apply false
     alias(libs.plugins.com.apptikar.chroneXbuild.android.application) apply false
+    alias(libs.plugins.androidLibrary) apply false
 }

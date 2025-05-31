@@ -9,4 +9,5 @@ internal fun CommonExtension<*,*,*, *, *, *>.configureCompileOptions() {
             targetCompatibility = JavaVersion.VERSION_21
             isCoreLibraryDesugaringEnabled = true
         }
+
 }

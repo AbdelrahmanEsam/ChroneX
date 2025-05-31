@@ -24,7 +24,7 @@ class KMPLibraryConventionPlugin : Plugin<Project> {
             extensions.configure<LibraryExtension>()
             {
                 defaultConfig.targetSdk = libs.versions.targetSdk.get().toInt()
-                configureMinimalAndroidApplication(libs)
+                configureMinimalAndroidApplication(libs, nameSpace = libs.versions.application.id.get())
             }
 
             dependencies {

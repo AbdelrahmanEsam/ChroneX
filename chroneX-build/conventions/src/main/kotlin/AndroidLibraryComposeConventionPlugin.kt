@@ -1,4 +1,5 @@
 import com.android.build.gradle.LibraryExtension
+import com.apptikar.chroneX.alias
 import com.apptikar.chroneX.android.configureAndroidCompose
 import com.apptikar.chroneX.implementation
 import com.apptikar.chroneX.libs
@@ -12,16 +13,8 @@ import org.gradle.kotlin.dsl.the
 class AndroidLibraryComposeConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
-            pluginManager.apply {
-                apply("com.android.library")
-
-            }
             val extension = extensions.getByType<LibraryExtension>()
             configureAndroidCompose(extension)
-
-
-
-
 
             dependencies {
                 implementation(libs.compose.foundation)

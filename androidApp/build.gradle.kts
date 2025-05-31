@@ -3,6 +3,6 @@ plugins {
 }
 
 dependencies{
-    implementation(projects.shared)
+    implementation(projects.androidApp.core.designSystem)
 }
 

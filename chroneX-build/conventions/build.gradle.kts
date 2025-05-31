@@ -30,4 +30,8 @@ gradlePlugin {
     createPlugin("com.apptikar.chroneXbuild.android.application", "AndroidApplicationConventionPlugin")
     createPlugin("com.apptikar.chroneXbuild.kmp.shared", "KMPLibraryConventionPlugin")
 
+    //library
+    createPlugin("com.apptikar.chroneXbuild.library.compose", "AndroidLibraryComposeConventionPlugin")
+    createPlugin("com.apptikar.chroneXbuild.android.library", "AndroidLibraryConventionPlugin")
+
 }

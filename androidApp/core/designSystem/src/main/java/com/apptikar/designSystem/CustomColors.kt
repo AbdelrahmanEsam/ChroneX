@@ -1,4 +1,4 @@
-package com.apptikar.chroneX.designSystem
+package com.apptikar.designSystem
 
 import androidx.compose.material3.ColorScheme
 import androidx.compose.runtime.Composable

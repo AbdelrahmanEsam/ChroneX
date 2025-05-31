@@ -18,3 +18,5 @@ dependencyResolutionManagement {
 rootProject.name = "ChroneX"
 include(":androidApp")
 include(":shared")
+include(":androidApp:core")
+include(":androidApp:core:designSystem")

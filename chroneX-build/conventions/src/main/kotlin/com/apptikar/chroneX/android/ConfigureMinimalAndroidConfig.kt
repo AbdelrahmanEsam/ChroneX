@@ -6,8 +6,13 @@ import org.gradle.accessors.dm.LibrariesForLibs
 import kotlin.text.get
 import kotlin.text.toInt
 
-fun CommonExtension<*,*,*, *, *, *>.configureMinimalAndroidApplication(libs: LibrariesForLibs)
-{
-    namespace = libs.versions.application.id.get()
+fun CommonExtension<*, *, *, *, *, *>.configureMinimalAndroidApplication(
+    libs: LibrariesForLibs,
+    nameSpace: String? = null
+) {
+
+    nameSpace?.let {
+        namespace = it
+    }
     compileSdk = libs.versions.compileSdk.get().toInt()
 }
