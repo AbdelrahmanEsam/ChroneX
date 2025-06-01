@@ -10,7 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.apptikar.designSystem.ChroneXTheme
 import com.apptikar.designSystem.headingFive
-import com.apptikar.designSystem.inputs.ChroneDropDown
+import com.apptikar.designSystem.dropdown.ChroneDropDown
 
 
 class MainActivity : ComponentActivity() {
@@ -23,7 +23,6 @@ class MainActivity : ComponentActivity() {
                     state = inputState,
                     options = listOf("1","2","3"),
                     placeHolder = "placeholder",
-                    onValueChange = {},
                 )
             }
         }

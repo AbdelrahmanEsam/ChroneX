@@ -38,6 +38,12 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
                 configureMinimalAndroidApplication(libs)
                 configureAndroidBuildTypesOptions()
                 configureCompileOptions()
+
+                packaging {
+                    resources {
+                        pickFirsts += "**/commonMain/resources/**"
+                    }
+                }
             }
 
             dependencies {

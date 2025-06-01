@@ -4,9 +4,14 @@ plugins {
 }
 
 android {
-    namespace = "com.apptikar.androidApp.core.designSystem"
+    namespace = "com.apptikar.designSystem"
 }
 
 dependencies{
+    api(libs.credentials)
+    api(libs.credentials.play.services.auth)
+    api(libs.googleid)
+    api(libs.googleAuth)
+    api(libs.bundles.coil)
     api(projects.shared)
 }

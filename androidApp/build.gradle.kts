@@ -6,3 +6,7 @@ dependencies{
     implementation(projects.androidApp.core.designSystem)
 }
 
+
+android {
+    sourceSets["main"].assets.srcDirs("src/commonMain/resources")
+}

@@ -1,5 +1,7 @@
 package com.apptikar.designSystem.inputs
 
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.text.input.InputTransformation
@@ -45,7 +47,7 @@ fun ChroneInputField(
     trailingComposable: @Composable (() -> Unit)? = null,
     leadingComposable: @Composable (() -> Unit)? = null,
     onValidate: () -> Unit = {},
-    readOnly : Boolean = false
+    readOnly: Boolean = false
 ) {
     val focusRequester = remember { FocusRequester() }
     val grayBackground = MaterialTheme.colorScheme.chroneXGray50
@@ -103,8 +105,6 @@ fun ChroneInputField(
     )
 
 }
-
-
 
 
 @Preview(showBackground = true)
