@@ -3,6 +3,8 @@ package com.apptikar.chroneX.designSystem.colors
 
 sealed class ChroneXColors(val color: Long) {
     data object PrimaryColor : ChroneXColors(0xFF12D18E)
+    data object Primary100Color : ChroneXColors(0xFFE7FAF4)
+    data object Primary300Color : ChroneXColors(0xFF71E3BB)
     data object SecondaryColor : ChroneXColors(0xFFFFC107)
 
     sealed class AlertsAndStatusColors(color: Long) : ChroneXColors(color) {

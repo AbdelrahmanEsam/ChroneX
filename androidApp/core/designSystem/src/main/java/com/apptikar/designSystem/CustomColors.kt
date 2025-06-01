@@ -9,6 +9,14 @@ import com.apptikar.chroneX.designSystem.colors.ChroneXColors
 val ColorScheme.chroneXPrimaryColor: Color
     get() = Color(ChroneXColors.PrimaryColor.color)
 
+@get:Composable
+val ColorScheme.chroneXPrimary100Color: Color
+    get() = Color(ChroneXColors.Primary100Color.color)
+
+@get:Composable
+val ColorScheme.chroneXPrimary300Color: Color
+    get() = Color(ChroneXColors.Primary300Color.color)
+
 
 @get:Composable
 val ColorScheme.chroneXSecondaryColor: Color
