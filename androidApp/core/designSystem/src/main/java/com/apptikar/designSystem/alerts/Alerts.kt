@@ -31,7 +31,7 @@ import com.apptikar.designSystem.chroneXWarningColor
 
 
 @Composable
-fun AlertMessage(
+private fun AlertMessage(
     message: String,
     backgroundColor: Color,
     textColor: Color,

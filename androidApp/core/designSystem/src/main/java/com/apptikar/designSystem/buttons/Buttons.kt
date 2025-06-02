@@ -100,7 +100,7 @@ fun ChroneXButton(
 
 
 @Composable
-fun ChronePlusButton(
+private fun ChronePlusButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     backgroundColor: Color = MaterialTheme.colorScheme.chroneXGreen,
