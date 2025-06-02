@@ -28,7 +28,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import com.apptikar.designSystem.ChroneXTheme
-import com.apptikar.designSystem.R
+import com.chroneX.designSystem.R
 import com.apptikar.designSystem.chroneXDarkTwo
 import com.apptikar.designSystem.chroneXGray300
 import com.apptikar.designSystem.chroneXGreen

@@ -30,7 +30,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import coil3.compose.AsyncImage
-import com.apptikar.designSystem.R
+import com.chroneX.designSystem.R
 import com.apptikar.designSystem.chroneXGray900
 import com.apptikar.designSystem.chroneXPrimary100Color
 import com.apptikar.designSystem.chroneXPrimary300Color

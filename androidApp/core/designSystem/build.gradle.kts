@@ -4,14 +4,14 @@ plugins {
 }
 
 android {
-    namespace = "com.apptikar.designSystem"
+    namespace = "com.chroneX.designSystem"
 }
 
 dependencies{
-    api(libs.credentials)
-    api(libs.credentials.play.services.auth)
-    api(libs.googleid)
-    api(libs.googleAuth)
-    api(libs.bundles.coil)
+    implementation(libs.credentials)
+    implementation(libs.credentials.play.services.auth)
+    implementation(libs.googleid)
+    implementation(libs.googleAuth)
+    implementation(libs.bundles.coil)
     api(projects.shared)
 }

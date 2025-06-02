@@ -19,6 +19,7 @@ class AndroidLibraryComposeConventionPlugin : Plugin<Project> {
             dependencies {
                 implementation(libs.compose.foundation)
                 implementation(libs.compose.material3)
+                implementation(libs.material)
                 implementation(libs.compose.ui)
                 implementation(libs.compose.ui.tooling)
                 implementation(libs.compose.ui.tooling.preview)

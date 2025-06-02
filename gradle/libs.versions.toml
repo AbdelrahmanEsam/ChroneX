@@ -40,6 +40,7 @@ googleAuth = "21.3.0"
 credentials = "1.3.0-alpha03"
 credentials-play-services-auth = "1.3.0-alpha03"
 googleid = "1.1.0"
+materialVersion = "1.12.0"
 
 
 [libraries]
@@ -83,7 +84,7 @@ androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = 
 junit = { group = "junit", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+material = { group = "androidx.compose.material", name = "material", version.ref = "compose" }
 androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "androidx-lifecycle" }
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "androidx-lifecycle" }
 coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil3" }
@@ -95,6 +96,7 @@ googleAuth = { module = "com.google.android.gms:play-services-auth", version.ref
 credentials = { group = "androidx.credentials", name = "credentials", version.ref = "credentials" }
 credentials-play-services-auth = { group = "androidx.credentials", name = "credentials-play-services-auth", version.ref = "credentials-play-services-auth" }
 googleid = { group = "com.google.android.libraries.identity.googleid", name = "googleid", version.ref = "googleid" }
+google-material = { group = "com.google.android.material", name = "material", version.ref = "materialVersion" }
 
 
 [bundles]

@@ -2,7 +2,15 @@ package com.apptikar.designSystem.inputs
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.text.input.InputTransformation
 import androidx.compose.foundation.text.input.TextFieldLineLimits
@@ -24,12 +32,19 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.BasicTextField
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.apptikar.designSystem.BodyLarge
 import com.apptikar.designSystem.ChroneXTheme
+import com.apptikar.designSystem.chroneXGray300
 import com.apptikar.designSystem.chroneXGray50
+import com.apptikar.designSystem.chroneXGray500
 import com.apptikar.designSystem.chroneXGreen
 import com.apptikar.designSystem.chroneXGreenBackground
 import com.apptikar.designSystem.chroneXPrimaryColor
@@ -106,6 +121,69 @@ fun ChroneInputField(
 
 }
 
+
+@Composable
+fun ChroneFormInputField(
+    title: String,
+    placeholder: String,
+    state: TextFieldState,
+    trailingComposable: @Composable (() -> Unit)? = null,
+    modifier: Modifier = Modifier
+) {
+    val underlineColor = MaterialTheme.colorScheme.chroneXPrimaryColor
+    val placeholderColor = MaterialTheme.colorScheme.chroneXGray500
+    val focusRequester = remember { FocusRequester() }
+
+    Column(
+        modifier = modifier.fillMaxWidth().clickable{
+            focusRequester.requestFocus()
+        }
+    ) {
+        Text(
+            text = title,
+            style = MaterialTheme.typography.bodyLarge,
+            modifier = Modifier.padding(bottom = 16.dp)
+        )
+
+        TextField(
+            state = state,
+            placeholder = {
+                Text(
+                    text = placeholder,
+                    color = placeholderColor,
+                    style = MaterialTheme.typography.bodyLarge
+                )
+            },
+            trailingIcon = trailingComposable,
+            colors = TextFieldDefaults.colors(
+                focusedTextColor = Color.Black,
+                unfocusedTextColor = Color.Black,
+                focusedContainerColor = Color.Transparent,
+                unfocusedContainerColor = Color.Transparent,
+                disabledContainerColor = Color.Transparent,
+                focusedIndicatorColor = underlineColor,
+                unfocusedIndicatorColor = Color.Transparent,
+                cursorColor = underlineColor
+            ),
+            textStyle = MaterialTheme.typography.bodyLarge,
+            lineLimits = TextFieldLineLimits.SingleLine,
+            modifier = Modifier.fillMaxWidth().focusRequester(focusRequester)
+        )
+    }
+}
+
+
+@Preview(showBackground = true)
+@Composable
+fun ChroneFormInputFieldPreview() {
+    ChroneXTheme {
+        ChroneFormInputField(
+            title = "Title",
+            placeholder = "Placeholder",
+            state = rememberTextFieldState("hello")
+        )
+    }
+}
 
 @Preview(showBackground = true)
 @Composable

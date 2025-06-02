@@ -20,7 +20,7 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
-import com.apptikar.designSystem.R
+import com.chroneX.designSystem.R
 import com.apptikar.designSystem.chroneXBlueTransparent
 import com.apptikar.designSystem.chroneXErrorColor
 import com.apptikar.designSystem.chroneXGreen

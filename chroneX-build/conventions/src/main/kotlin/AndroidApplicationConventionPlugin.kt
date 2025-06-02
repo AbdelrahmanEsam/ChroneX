@@ -33,6 +33,8 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
 
             dependencies {
                 coreLibraryDesugaring(libs.core.library.desugaring)
+                implementation(libs.navigation.compose)
+                implementation(libs.material)
                 implementation(libs.androidx.core.ktx)
                 implementation(libs.bundles.lifecycle)
             }

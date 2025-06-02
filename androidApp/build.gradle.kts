@@ -3,6 +3,7 @@ plugins {
 }
 
 dependencies{
+    implementation(projects.androidApp.core.utils)
     implementation(projects.androidApp.core.designSystem)
 }
 
