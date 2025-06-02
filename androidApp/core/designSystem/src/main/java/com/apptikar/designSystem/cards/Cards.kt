@@ -29,9 +29,6 @@ fun ChroneLineChart(
     lineColor: Color = MaterialTheme.colorScheme.chroneXPrimaryColor,
     backgroundColor: Color = Color.Transparent,
     strokeWidth: Float = 3f,
-    showDots: Boolean = true,
-    dotColor: Color = lineColor,
-    dotRadius: Float = 4f
 ) {
     Canvas(
         modifier = modifier
@@ -72,16 +69,6 @@ fun ChroneLineChart(
                 style = Stroke(width = strokeWidth, cap = StrokeCap.Round, join = StrokeJoin.Round)
             )
         }
-
-        if (showDots) {
-            points.forEach { point ->
-                drawCircle(
-                    color = dotColor,
-                    radius = dotRadius,
-                    center = point
-                )
-            }
-        }
     }
 }
 
@@ -95,9 +82,6 @@ fun ChroneLineChartPreview() {
             lineColor = MaterialTheme.colorScheme.chroneXPrimaryColor,
             backgroundColor = Color.LightGray.copy(alpha = 0.2f),
             strokeWidth = 4f,
-            showDots = true,
-            dotColor = MaterialTheme.colorScheme.chroneXPrimaryColor,
-            dotRadius = 6f,
             modifier = Modifier.padding(16.dp)
         )
     }
