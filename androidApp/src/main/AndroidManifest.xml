@@ -4,8 +4,10 @@
 
     <application
         android:allowBackup="false"
+        android:enableOnBackInvokedCallback="true"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:targetApi="33">
         <activity
             android:name=".MainActivity"
             android:exported="true">
