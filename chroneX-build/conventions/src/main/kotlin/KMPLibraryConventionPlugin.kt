@@ -15,12 +15,7 @@ class KMPLibraryConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target)
         {
-
-
             configureKmpConfig()
-
-
-
             extensions.configure<LibraryExtension>()
             {
                 defaultConfig.targetSdk = libs.versions.targetSdk.get().toInt()
