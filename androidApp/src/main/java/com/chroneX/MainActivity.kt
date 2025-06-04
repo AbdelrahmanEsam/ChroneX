@@ -1,4 +1,4 @@
-package com.apptikar.chroneX
+package com.chroneX
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

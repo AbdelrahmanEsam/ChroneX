@@ -1,19 +1,21 @@
-package com.apptikar.chroneX.navigation
+package com.chroneX.navigation
 
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBars
-import androidx.compose.material.BottomNavigation
-import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.NavigationBar
+import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -35,11 +37,11 @@ fun ChroneBottomNavigation(
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val density = LocalDensity.current
 
-    BottomNavigation(
+    NavigationBar(
         modifier = Modifier.height(with(density) {
             WindowInsets.navigationBars.getBottom(density).toDp()
         } + 50.dp),
-        backgroundColor = MaterialTheme.colorScheme.chroneXWhite,
+        contentColor = MaterialTheme.colorScheme.chroneXWhite,
     ) {
         screens.forEach { screen ->
             AddItem(
@@ -66,8 +68,11 @@ fun RowScope.AddItem(
         }
     }
 
-    BottomNavigationItem(
-        selectedContentColor = MaterialTheme.colorScheme.chroneXPrimaryColor,
+    NavigationBarItem(
+        colors = NavigationBarItemDefaults.colors(
+            selectedIconColor = MaterialTheme.colorScheme.chroneXPrimaryColor,
+            unselectedIconColor = Color.Transparent
+        ),
         onClick = onClick,
         label = {
             Text(

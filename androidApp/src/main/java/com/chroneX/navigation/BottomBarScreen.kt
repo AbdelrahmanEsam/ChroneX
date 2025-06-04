@@ -1,4 +1,4 @@
-package com.apptikar.chroneX.navigation
+package com.chroneX.navigation
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes

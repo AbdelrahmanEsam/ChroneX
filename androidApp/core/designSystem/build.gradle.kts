@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.chroneX.designSystem"
+    namespace = "${libs.versions.application.id.get()}.designSystem"
 }
 
 dependencies{

@@ -4,5 +4,5 @@ plugins {
 }
 
 android {
-    namespace = "com.chroneX.utils"
+    namespace = "${libs.versions.application.id.get()}.utils"
 }
