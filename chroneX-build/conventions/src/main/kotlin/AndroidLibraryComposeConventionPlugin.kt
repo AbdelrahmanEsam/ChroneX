@@ -28,8 +28,6 @@ class AndroidLibraryComposeConventionPlugin : Plugin<Project> {
                 implementation(libs.pagination.compose)
             }
         }
-
-
     }
 
 }
