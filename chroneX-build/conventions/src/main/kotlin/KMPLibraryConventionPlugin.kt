@@ -1,5 +1,6 @@
 import com.android.build.gradle.LibraryExtension
 import com.apptikar.chroneX.android.configureMinimalAndroidApplication
+import com.apptikar.chroneX.implementation
 import com.apptikar.chroneX.kmp.configureKmpConfig
 import com.apptikar.chroneX.libs
 import org.gradle.accessors.dm.LibrariesForLibs

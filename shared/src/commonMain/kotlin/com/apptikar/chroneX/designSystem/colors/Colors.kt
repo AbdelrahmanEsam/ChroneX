@@ -1,6 +1,9 @@
 package com.apptikar.chroneX.designSystem.colors
 
+import co.touchlab.skie.configuration.annotations.SealedInterop
 
+
+@SealedInterop.EntireHierarchyExport.Enabled
 sealed class ChroneXColors(val color: Long) {
     data object PrimaryColor : ChroneXColors(0xFF12D18E)
     data object Primary100Color : ChroneXColors(0xFFE7FAF4)
@@ -28,13 +31,12 @@ sealed class ChroneXColors(val color: Long) {
         data object Gray50 : GrayScale(0xFFFAFAFA)
     }
 
-
+    @SealedInterop.Enabled
     sealed class DarkColors(color: Long) : ChroneXColors(color) {
         data object DarkOne : DarkColors(0xFF181A20)
         data object DarkTwo : DarkColors(0xFF1F222A)
         data object DarkThree : DarkColors(0xFF35383F)
     }
-
 
     sealed class Others(color: Long) : ChroneXColors(color) {
         data object White : Others(0xFFFFFFFF)
