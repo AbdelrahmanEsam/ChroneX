@@ -11,14 +11,15 @@
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
-		9CF152542DF1665500F5F8C1 /* designSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 9CF152532DF1665500F5F8C1 /* designSystem */; };
+		9C40F23F2E187AA700D489DD /* designSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 9C40F23E2E187AA700D489DD /* designSystem */; };
+		9CAF2B4F2E193129006BEE07 /* resources in Frameworks */ = {isa = PBXBuildFile; productRef = 9CAF2B4E2E193129006BEE07 /* resources */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		7555FFB4242A642300829871 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "";
+			dstPath = "$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)";
 			dstSubfolderSpec = 10;
 			files = (
 			);
@@ -45,7 +46,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CF152542DF1665500F5F8C1 /* designSystem in Frameworks */,
+				9CAF2B4F2E193129006BEE07 /* resources in Frameworks */,
+				9C40F23F2E187AA700D489DD /* designSystem in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +150,7 @@
 			);
 			mainGroup = 7555FF72242A565900829871;
 			packageReferences = (
-				9CF152522DF1665500F5F8C1 /* XCLocalSwiftPackageReference "iosApp/core/designSystem" */,
+				9C40F23D2E187AA700D489DD /* XCLocalSwiftPackageReference "iosApp/core/designSystem" */,
 			);
 			productRefGroup = 7555FF7C242A565900829871 /* Products */;
 			projectDirPath = "";
@@ -330,13 +332,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 73M599M86V;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
 				);
 				INFOPLIST_FILE = iosApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -348,7 +351,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chroneX.iosApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -359,13 +362,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 73M599M86V;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
 				);
 				INFOPLIST_FILE = iosApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -377,7 +381,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chroneX.iosApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -406,16 +410,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		9CF152522DF1665500F5F8C1 /* XCLocalSwiftPackageReference "iosApp/core/designSystem" */ = {
+		9C40F23D2E187AA700D489DD /* XCLocalSwiftPackageReference "iosApp/core/designSystem" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = iosApp/core/designSystem;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9CF152532DF1665500F5F8C1 /* designSystem */ = {
+		9C40F23E2E187AA700D489DD /* designSystem */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = designSystem;
+		};
+		9CAF2B4E2E193129006BEE07 /* resources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C40F23D2E187AA700D489DD /* XCLocalSwiftPackageReference "iosApp/core/designSystem" */;
+			productName = resources;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

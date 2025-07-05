@@ -38,7 +38,7 @@ import com.apptikar.designSystem.chroneXPrimaryColor
 
 
 @Composable
-fun ChroneInputField(
+fun ChroneXInputField(
     state: TextFieldState,
     modifier: Modifier = Modifier,
     placeHolder: String? = null,
@@ -55,6 +55,7 @@ fun ChroneInputField(
     val grayBackground = MaterialTheme.colorScheme.chroneXGray50
     val borderColor = MaterialTheme.colorScheme.chroneXPrimaryColor
     val greenBackground = MaterialTheme.colorScheme.chroneXGreenBackground
+    val placeholderColor = MaterialTheme.colorScheme.chroneXGray500
 
     TextField(
         modifier = modifier
@@ -77,7 +78,7 @@ fun ChroneInputField(
         placeholder = {
             if (placeHolder != null) Text(
                 placeHolder,
-                style = MaterialTheme.typography.BodyLarge.copy(color = MaterialTheme.colorScheme.chroneXGreen)
+                style = MaterialTheme.typography.BodyLarge.copy(color = placeholderColor)
             ) else null
         },
         outputTransformation = {},
@@ -176,8 +177,9 @@ fun ChroneFormInputFieldPreview() {
 @Composable
 fun ChroneInputFieldPreview() {
     ChroneXTheme {
-        ChroneInputField(
-            state = rememberTextFieldState("hello"),
+        ChroneXInputField(
+            placeHolder = "yes",
+            state = rememberTextFieldState(),
             limitedLines = TextFieldLineLimits.SingleLine
         )
     }
@@ -187,7 +189,7 @@ fun ChroneInputFieldPreview() {
 @Composable
 fun ChroneInputFieldPreviewMultiLine() {
     ChroneXTheme {
-        ChroneInputField(
+        ChroneXInputField(
             state = rememberTextFieldState("hello"),
             limitedLines = TextFieldLineLimits.MultiLine(maxHeightInLines = 5)
         )

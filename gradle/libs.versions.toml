@@ -1,32 +1,32 @@
 [versions]
 
-compileSdk = "35"
+compileSdk = "36"
 minSdk = "24"
-targetSdk = "35"
+targetSdk = "36"
 java-version = "21"
 application-id = "com.chroneX"
-agp = "8.10.1"
-kotlin = "2.1.21"
-compose = "1.8.2"
-compose-material3 = "1.4.0-alpha15"
+agp = "8.11.0"
+kotlin = "2.2.0"
+compose = "1.8.3"
+compose-material3 = "1.4.0-alpha17"
 androidx-activityCompose = "1.10.1"
-koin = "3.5.6"
-koin-android = "3.5.6"
-koin-compose = "1.1.5"
-kotlinx-serialization = "2.1.21"
-navigationCompose = "2.9.0"
+koin = "4.1.0"
+koin-android = "4.1.0"
+koin-compose = "4.1.0"
+kotlinx-serialization = "2.2.0"
+navigationCompose = "2.9.1"
 android-startup = "1.2.0"
 androidx-lifecycle = "2.9.1"
-ktor = "3.1.2"
+ktor = "3.2.1"
 pagination = "3.3.6"
 datastore = "1.1.7"
 annotation = "1.9.1"
-kotlinXSerialization = "1.8.1"
+kotlinXSerialization = "1.9.0"
 androidx-window = "1.4.0"
 gradleSecrets = "2.0.1"
 coreLibraryDesugaring = "2.1.5"
-ksp = "2.1.21-2.0.1"
-kotlinStdlib = "2.1.21"
+ksp = "2.2.0-2.0.2"
+kotlinStdlib = "2.2.0"
 runner = "1.6.2"
 core = "1.6.1"
 junit = "1.2.1"
@@ -39,7 +39,7 @@ googleAuth = "21.3.0"
 credentials = "1.5.0"
 credentials-play-services-auth = "1.5.0"
 googleid = "1.1.1"
-skieVersion = "0.10.2"
+skieVersion = "0.10.4"
 
 
 [libraries]
@@ -111,14 +111,10 @@ ktor = [
     "ktor-serialization-kotlinx-json",
     "ktor-client-logging"
 ]
-pagination = [
-    "pagination-common",
-    "pagination-runtime",
-    "pagination-compose"]
+pagination = ["pagination-common", "pagination-runtime", "pagination-compose"]
 
 
-lifecycle = ["androidx-lifecycle-runtime-ktx",
-    "androidx-lifecycle-viewmodel-ktx"]
+lifecycle = ["androidx-lifecycle-runtime-ktx", "androidx-lifecycle-viewmodel-ktx"]
 
 coil = ["coil-compose", "coil-compose-core", "coil-network-ktor", "coil-mp", "coil-svg"]
 

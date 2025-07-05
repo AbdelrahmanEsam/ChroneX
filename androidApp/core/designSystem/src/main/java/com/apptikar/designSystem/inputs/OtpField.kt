@@ -17,6 +17,7 @@ import androidx.compose.foundation.text.input.InputTransformation
 import androidx.compose.foundation.text.input.TextFieldLineLimits
 import androidx.compose.foundation.text.input.TextFieldState
 import androidx.compose.foundation.text.input.maxLength
+import androidx.compose.foundation.text.input.rememberTextFieldState
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -39,7 +40,9 @@ import androidx.compose.ui.semantics.contentType
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.apptikar.designSystem.ChroneXTheme
 import com.apptikar.designSystem.chroneXGray50
 import com.apptikar.designSystem.chroneXGray900
 import com.apptikar.designSystem.chroneXGreenBackground
@@ -47,7 +50,7 @@ import com.apptikar.designSystem.chroneXPrimaryColor
 import com.apptikar.designSystem.headingFour
 
 @Composable
-fun ChroneOtpField(
+fun ChroneXOtpField(
     state: TextFieldState,
     modifier: Modifier = Modifier,
     limitedLines: TextFieldLineLimits = TextFieldLineLimits.SingleLine,
@@ -138,12 +141,10 @@ fun Digit(
             },
         contentAlignment = Alignment.Center
     ) {
-
         Text(
             text = number.toString(),
             style = MaterialTheme.typography.headingFour.copy(MaterialTheme.colorScheme.chroneXGray900)
         )
-
     }
 }
 
@@ -152,4 +153,15 @@ fun Digit(
 fun rememberKeyboardAsState(): State<Boolean> {
     val isImeVisible = WindowInsets.ime.getBottom(LocalDensity.current) > 0
     return rememberUpdatedState(isImeVisible)
+}
+
+
+@Preview(showBackground = true)
+@Composable
+private fun OtpChroneInputFieldPreview() {
+    ChroneXTheme {
+        ChroneXOtpField(
+            state = rememberTextFieldState(""),
+        )
+    }
 }

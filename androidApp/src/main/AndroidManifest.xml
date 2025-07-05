@@ -23,7 +23,7 @@
             android:exported="false"
             tools:node="merge">
             <meta-data
-                android:name="com.apptikar.chroneX.ApplicationContextInitializer"
+                android:name="com.chroneX.ApplicationContextInitializer"
                 android:value="androidx.startup" />
         </provider>
 
