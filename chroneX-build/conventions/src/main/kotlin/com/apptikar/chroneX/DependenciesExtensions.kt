@@ -71,7 +71,7 @@ fun DependencyHandler.coreLibraryDesugaring(
     return add("coreLibraryDesugaring", dependencyNotation)
 }
 
-fun PluginManager.alias(pluginDependency: Provider<PluginDependency?>)
+fun PluginManager.alias(pluginDependency: Provider<PluginDependency>)
 {
     this.apply(pluginDependency.get().pluginId)
 }
