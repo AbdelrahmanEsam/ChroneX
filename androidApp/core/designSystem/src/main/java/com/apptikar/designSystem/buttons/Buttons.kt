@@ -152,7 +152,7 @@ fun ChroneBlackRoundedPlusButton(
     backgroundColor = MaterialTheme.colorScheme.chroneXDarkTwo,
     contentColor = MaterialTheme.colorScheme.chroneXWhite,
     size = size,
-    shape = RoundedCornerShape(14.dp)
+    shape = RoundedCornerShape(12.dp)
 )
 
 @Composable
@@ -181,7 +181,7 @@ fun ChroneOutlinedGreen(
     backgroundColor = Color.Transparent,
     contentColor = MaterialTheme.colorScheme.chroneXPrimaryColor,
     size = size,
-    shape = RoundedCornerShape(14.dp),
+    shape = RoundedCornerShape(12.dp),
     border = BorderStroke(1.dp, MaterialTheme.colorScheme.chroneXGray300)
 )
 

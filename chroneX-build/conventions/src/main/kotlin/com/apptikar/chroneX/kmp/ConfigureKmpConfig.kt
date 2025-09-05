@@ -13,6 +13,7 @@ internal fun Project.configureKmpConfig() {
         alias(libs.plugins.kotlinx.serialization.plugin)
         alias(libs.plugins.kotlin.parcelize)
         alias(libs.plugins.gradle.secrets)
+        alias(libs.plugins.skiePlugin)
     }
 
 

@@ -22,8 +22,8 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
+import com.apptikar.designSystem.inputs.ChroneXInputField
 import com.chroneX.designSystem.R
-import com.apptikar.designSystem.inputs.ChroneInputField
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -48,7 +48,7 @@ fun ChroneDropDown(
             expanded = !expanded
         }
     ) {
-        ChroneInputField(
+        ChroneXInputField(
             state = state,
             readOnly = true,
             placeHolder = placeHolder,
