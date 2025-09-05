@@ -75,11 +75,11 @@ fun ChroneFilledChip(
 
 @Composable
 fun OutlinedFilledChip(
+    modifier: Modifier = Modifier,
     text: String,
     onClick: () -> Unit = {},
     borderColor: Color = MaterialTheme.colorScheme.chroneXPrimaryColor,
     contentColor: Color = MaterialTheme.colorScheme.chroneXPrimaryColor,
-    modifier: Modifier = Modifier,
     enabled: Boolean = true,
     leadingIcon: @Composable (() -> Unit)? = null,
     trailingIcon: @Composable (() -> Unit)? = null,

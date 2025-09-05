@@ -8,7 +8,6 @@ fun BaseAppModuleExtension.configureAndroidDefaultConfig(libs: LibrariesForLibs)
     defaultConfig {
         applicationId = libs.versions.application.id.get()
         minSdk = libs.versions.minSdk.get().toInt()
-        targetSdk = libs.versions.targetSdk.get().toInt()
         versionCode = 1
         versionName = "1.0"
     }

@@ -18,7 +18,6 @@ class KMPLibraryConventionPlugin : Plugin<Project> {
             configureKmpConfig()
             extensions.configure<LibraryExtension>()
             {
-                defaultConfig.targetSdk = libs.versions.targetSdk.get().toInt()
                 configureMinimalAndroidApplication(libs, nameSpace = libs.versions.application.id.get())
             }
 
