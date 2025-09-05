@@ -38,6 +38,7 @@ googleAuth = "21.4.0"
 credentials = "1.5.0"
 credentials-play-services-auth = "1.5.0"
 googleid = "1.1.1"
+skieVersion = "0.10.6"
 
 
 [libraries]
@@ -93,6 +94,7 @@ googleAuth = { module = "com.google.android.gms:play-services-auth", version.ref
 credentials = { group = "androidx.credentials", name = "credentials", version.ref = "credentials" }
 credentials-play-services-auth = { group = "androidx.credentials", name = "credentials-play-services-auth", version.ref = "credentials-play-services-auth" }
 googleid = { group = "com.google.android.libraries.identity.googleid", name = "googleid", version.ref = "googleid" }
+skie-annotation = { group = "co.touchlab.skie", name = "configuration-annotations", version.ref = "skieVersion" }
 
 
 [bundles]
@@ -131,7 +133,7 @@ kotlinx-serialization-plugin = { id = "org.jetbrains.kotlin.plugin.serialization
 kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
 gradle-secrets = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "gradleSecrets" }
 android-kotlin-multiplatform-library = { id = "com.android.kotlin.multiplatform.library", version.ref = "agp" }
-
+skiePlugin = { id = "co.touchlab.skie", version.ref = "skieVersion" }
 #chroneX conventions
 com-apptikar-chroneXbuild-android-application = { id = "com.apptikar.chroneXbuild.android.application" }
 com-apptikar-chroneXbuild-kmp-shared = { id = "com.apptikar.chroneXbuild.kmp.shared" }
